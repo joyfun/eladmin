@@ -8,6 +8,7 @@ import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactor
 import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2018/11/15 9:20:19
  */
 @EnableAsync
-@RestController
+@Controller
 @SpringBootApplication
 @EnableTransactionManagement
 public class AppRun {
@@ -42,9 +43,9 @@ public class AppRun {
      * 访问首页提示
      * @return /
      */
-    @GetMapping("/")
-    @AnonymousAccess
-    public String index() {
-        return "Backend service started successfully";
-    }
+//    @GetMapping("/")
+//    @AnonymousAccess
+//    public String index() {
+//        return "index";
+//    }
 }

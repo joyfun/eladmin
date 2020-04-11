@@ -26,7 +26,6 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.1.0.RELEASE</version>
     </parent>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -81,7 +80,12 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
         </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
 
+        </dependency>
         <!--监控sql日志-->
         <dependency>
             <groupId>org.bgee.log4jdbc-log4j2</groupId>
@@ -125,7 +129,6 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
         </dependency>
         <!-- druid数据源驱动 -->
         <dependency>
@@ -213,6 +216,7 @@
     </build>
 
     <repositories>
+
         <repository>
             <id>public</id>
             <name>aliyun nexus</name>
@@ -220,6 +224,14 @@
             <releases>
                 <enabled>true</enabled>
             </releases>
+        </repository>
+        <repository>
+            <id>shuimu</id>
+            <name>shuimu</name>
+            <url>http://www.shuimuchina.com/repo/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
         </repository>
     </repositories>
 

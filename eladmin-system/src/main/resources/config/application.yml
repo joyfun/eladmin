@@ -8,6 +8,8 @@ spring:
     active: dev
   jackson:
     time-zone: GMT+8
+  resources:
+    static-locations: file:/Users/joyfun/hdcon/code/eladmin-web/dist/
   data:
     redis:
       repositories:
@@ -22,10 +24,10 @@ spring:
 
   redis:
     #数据库索引
-    database: 0
-    host: 127.0.0.1
+    database: 4
+    host: 124.207.127.110
     port: 6379
-    password:
+    password: hdconredis
     #连接超时时间
     timeout: 5000
 

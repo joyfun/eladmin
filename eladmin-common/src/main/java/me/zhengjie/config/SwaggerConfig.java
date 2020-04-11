@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
 import org.springframework.data.domain.Pageable;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.ParameterBuilder;
 import springfox.documentation.builders.PathSelectors;
@@ -32,8 +33,8 @@ import static springfox.documentation.schema.AlternateTypeRules.newRule;
  * @date 2018-11-23
  */
 
-@Configuration
 @EnableSwagger2
+@EnableWebMvc
 public class SwaggerConfig {
 
     @Value("${jwt.header}")
@@ -78,7 +79,7 @@ public class SwaggerConfig {
 /**
  *  将Pageable转换展示在swagger中
  */
-@Configuration
+@EnableWebMvc
 class SwaggerDataConfig {
 
     @Bean
